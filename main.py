@@ -6,8 +6,7 @@ realTimeYear = datetime.datetime.now().year
 date = []
 isInputInPast = False
 
-# Get and Check the year of the Input
-# HEHEHEHE
+# Get and Check the input 'year'
 
 year = int(input("Year: "))
 
@@ -24,7 +23,7 @@ if not isLeapYear:
 else:
     months = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 
-# Get and Check the month of the Input
+# Get and Check the input 'month'
 month = int(input("Month: "))
 
 if 0 < month <= 12 and month < realTimeDate[1] and year <= realTimeDate[2]:
@@ -38,7 +37,7 @@ elif month > 12 or month <= 0:
     exit()
 
 
-# Get and Check the day of the Input
+# Get and Check the input 'day'
 day = int(input("Day: "))
 
 if 0 < day <= months[month - 1] and day < realTimeDate[0] and year <= realTimeDate[2] and month <= realTimeDate[1]:
@@ -51,7 +50,10 @@ elif day <= 0 or day > months[month - 1]:
     print("Input isn't in range of 1-" + months[month - 1].__str__() + "!")
     exit()
 
+# Calculates the Range in days between the realtime date and the input date
 def CalculateDaysRange():
+
+
 
     leapYear = float(realTimeYear / 4).is_integer() and not float(realTimeYear / 100).is_integer()
 
@@ -115,7 +117,9 @@ def CalculateDaysRange():
                     currMonth -= 1
                     # print("CurrMonth: " + currMonth.__str__())
 
-    if not isInputInPast:
+    if realTimeDate[0] == date[2] and realTimeDate[1] == date[1] and realTimeDate[2] == date[0]:
+        print(date[0].__str__() + "." + date[1].__str__() + "." + date[2].__str__() + " is today.")
+    elif not isInputInPast:
         print(date[0].__str__() + "." + date[1].__str__() + "." + date[2].__str__() + " is in " + days.__str__() + " days.")
     else:
         print(date[0].__str__() + "." + date[1].__str__() + "." + date[2].__str__() + " was " + days.__str__() + " days ago.")
@@ -123,4 +127,4 @@ def CalculateDaysRange():
 
 CalculateDaysRange()
 
-t = input()
+void = input()
