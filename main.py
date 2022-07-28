@@ -118,11 +118,11 @@ def CalculateDaysRange():
                     # print("CurrMonth: " + currMonth.__str__())
 
     if realTimeDate[0] == date[2] and realTimeDate[1] == date[1] and realTimeDate[2] == date[0]:
-        print(date[0].__str__() + "." + date[1].__str__() + "." + date[2].__str__() + " is today.")
+        print(date[2].__str__() + "." + date[1].__str__() + "." + date[0].__str__() + " is today.")
     elif not isInputInPast:
-        print(date[0].__str__() + "." + date[1].__str__() + "." + date[2].__str__() + " is in " + days.__str__() + " days.")
+        print(date[2].__str__() + "." + date[1].__str__() + "." + date[0].__str__() + " is in " + days.__str__() + " days.")
     else:
-        print(date[0].__str__() + "." + date[1].__str__() + "." + date[2].__str__() + " was " + days.__str__() + " days ago.")
+        print(date[2].__str__() + "." + date[1].__str__() + "." + date[0].__str__() + " was " + days.__str__() + " days ago.")
 
 
 CalculateDaysRange()
